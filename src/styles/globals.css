@@ -1,0 +1,82 @@
+/* Tailwind CSS global styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * Custom global styles
+ * These styles are applied globally across the application.
+ * You can customize them as per your design requirements.
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Geist Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  :root {
+    --background: #ffffff;
+    --text: #000000;
+  }
+  
+  [data-theme='dark'] {
+    --background: #1a1a1a;
+    --text: #ffffff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  input, textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #0070f3;
+    outline: none;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  .transition-colors {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
