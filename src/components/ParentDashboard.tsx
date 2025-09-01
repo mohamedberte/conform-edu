@@ -253,16 +253,16 @@ export default function ParentDashboard({ onLogout }: ParentDashboardProps) {
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+          <Card className="bg-gradient-to-r from-orange-500 to-green-500 text-white">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-blue-100 text-sm">Professeurs actifs</p>
+                  <p className="text-orange-100 text-sm">Professeurs actifs</p>
                   <p className="text-2xl font-bold">
                     {new Set(dashboardData.children.flatMap(child => child.subjects.map((s: Subject) => s.tutor))).size}
                   </p>
                 </div>
-                <Users className="h-8 w-8 text-blue-200" />
+                <Users className="h-8 w-8 text-orange-200" />
               </div>
             </CardContent>
           </Card>
@@ -360,7 +360,7 @@ export default function ParentDashboard({ onLogout }: ParentDashboardProps) {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-blue-600" />
+                  <MessageSquare className="h-5 w-5 text-orange-600" />
                   Communications professeurs
                 </CardTitle>
               </CardHeader>
@@ -371,7 +371,7 @@ export default function ParentDashboard({ onLogout }: ParentDashboardProps) {
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h4 className="font-medium text-gray-900">{interaction.tutor}</h4>
-                          <p className="text-sm text-blue-600">{interaction.subject} - {interaction.child}</p>
+                          <p className="text-sm text-orange-600">{interaction.subject} - {interaction.child}</p>
                         </div>
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, i) => (

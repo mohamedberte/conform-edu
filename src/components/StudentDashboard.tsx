@@ -307,9 +307,9 @@ export default function StudentDashboard({ onLogout }: StudentDashboardProps) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
           <p className="text-gray-600">Chargement de votre tableau de bord...</p>
         </div>
       </div>
@@ -317,13 +317,13 @@ export default function StudentDashboard({ onLogout }: StudentDashboardProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50">
       {/* Header avec navigation */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-orange-500 to-green-500 p-2 rounded-lg">
                 <BookOpen className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -367,14 +367,14 @@ export default function StudentDashboard({ onLogout }: StudentDashboardProps) {
 
         {/* Statistiques rapides */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+          <Card className="bg-gradient-to-r from-orange-500 to-green-500 text-white">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-blue-100 text-sm">Cours actifs</p>
+                  <p className="text-orange-100 text-sm">Cours actifs</p>
                   <p className="text-2xl font-bold">{dashboardData.activeBookings.length}</p>
                 </div>
-                <Calendar className="h-8 w-8 text-blue-200" />
+                <Calendar className="h-8 w-8 text-orange-200" />
               </div>
             </CardContent>
           </Card>
@@ -423,16 +423,16 @@ export default function StudentDashboard({ onLogout }: StudentDashboardProps) {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <PlayCircle className="h-5 w-5 text-blue-600" />
+                  <PlayCircle className="h-5 w-5 text-orange-600" />
                   Mes prochains cours
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {dashboardData.upcomingLessons.map((lesson, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
+                    <div key={index} className="flex items-center justify-between p-4 bg-gradient-to-r from-orange-50 to-green-50 rounded-lg border border-orange-100">
                       <div className="flex items-center space-x-4">
-                        <div className="bg-blue-600 text-white p-2 rounded-lg">
+                        <div className="bg-orange-500 text-white p-2 rounded-lg">
                           <BookOpen className="h-4 w-4" />
                         </div>
                         <div>
@@ -469,7 +469,7 @@ export default function StudentDashboard({ onLogout }: StudentDashboardProps) {
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h4 className="font-medium text-gray-900">{tutor.name}</h4>
-                          <p className="text-sm text-blue-600 font-medium">{tutor.subject}</p>
+                          <p className="text-sm text-orange-600 font-medium">{tutor.subject}</p>
                           <div className="flex items-center gap-2 mt-1">
                             <MapPin className="h-3 w-3 text-gray-400" />
                             <span className="text-xs text-gray-600">{tutor.location}</span>
